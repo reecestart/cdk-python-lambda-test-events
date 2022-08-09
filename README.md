@@ -1,7 +1,24 @@
 
-# Welcome to your CDK Python project!
+# Create Lambda Test Events using AWS CDK!
 
-This is a blank project for CDK development with Python.
+To create Lambda Test Events run:
+```
+❯ cdk deploy -c lambda_function_name=MY_LAMBDA_FUNCTION_NAME
+```
+
+To change the Lambda Test Event information edit `schemaconfig.py`
+
+To generate a new event structure for `schemaconfig.py` based off existing Lambda Test Event templates:
+1. Create a Shareable Test Event using a Lambda Test Event in the Console
+2. run:
+```
+❯ aws schemas describe-schema --registry-name lambda-testevent-schemas --schema-name _MY_LAMBDA_FUNCTION_NAME-schema --query 'Content' > schema-definition.json
+```
+3. Ensure the `schema =` is set in `schemaconfig.py`
+
+## Other generic CDK Stuff below
+
+This is a project for CDK creation of AWS Lambda Test Events with Python.
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
