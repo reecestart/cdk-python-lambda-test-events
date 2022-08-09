@@ -1,5 +1,5 @@
 
-# Create Lambda Test Events using AWS CDK!
+# Create Lambda Test Events using AWS CDK
 
 To create Lambda Test Events run:
 ```
